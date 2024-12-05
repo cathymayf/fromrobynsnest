@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+<div class="navbar">
+  <a href="index.html"  target="_blank">Home</a>
+  <a href="about.html" target="_blank">About Us</a>
+  <a href="gallery.html" target="_blank"  class="current">Gallery</a>
+  <a href="contact_us.html" target="_blank">Contact Us</a>
+  
+</div>
+
+  <div class="grid-container">
+
+    <div class="grid-item"><img src="images/catalog/338892700_1178142952876960_4829487452751562387_n.jpg" alt="Image 1"></div>
+    <div class="grid-item"><img src="images/catalog/338943653_939031573891316_4470365392607313663_n.jpg" alt="Image 2"></div>
+    <div class="grid-item"><img src="images/catalog/338943653_2487918871358704_8678628945436451148_n.jpg" alt="Image 3"></div>
+    <div class="grid-item"><img src="images/catalog/338976592_1231209147506835_592417772738779130_n.jpg" alt="Image 4"></div>
+    <div class="grid-item"><img src="images/catalog/338976878_1225741751645049_940720744390337789_n.jpg" alt="Image 5"></div>
+    <div class="grid-item"><img src="images/catalog/339006373_682068687027639_4295591695238869022_n.jpg" alt="Image 6"></div>
+    <div class="grid-item"><img src="images/catalog/339104471_1265119864432576_8486045138487770774_n.jpg" alt="Image 7"></div>
+    <div class="grid-item"><img src="images/catalog/339446225_1522385148288917_3085336609060919172_n.jpg" alt="Image 8"></div>
+    <div class="grid-item"><img src="images/catalog/339566032_221941927184487_3073223079593643242_n.jpg" alt="Image 9"></div>
+    <div class="grid-item"><img src="images/catalog/339569876_632074142083967_5655878898069400983_n.jpg" alt="Image 10"></div>
+    <div class="grid-item"><img src="images/catalog/339102646_183998317770205_4780797163594119084_n.jpg" alt="Image 11"></div>
+    <div class="grid-item"><img src="images/catalog/339647435_765068115328823_553571973174471415_n.jpg" alt="Image 12"></div>
+    <div class="grid-item"><img src="images/catalog/339912755_176329665229437_8697597295150304807_n.jpg" alt="Image 13"></div>
+    <div class="grid-item"><img src="images/catalog/339917374_190121083807009_170120657459934951_n.jpg" alt="Image 14"></div>
+    <div class="grid-item"><img src="images/catalog/339921011_765449331634335_4507402792050566604_n.jpg" alt="Image 15"></div>
+    <div class="grid-item"><img src="images/catalog/339926088_904267727457882_1012494586149397893_n.jpg" alt="Image 16"></div>
+    <div class="grid-item"><img src="images/catalog/339930226_956351868853914_8108302560537510108_n.jpg" alt="Image 17"></div>
+    <div class="grid-item"><img src="images/catalog/339948620_3214555385511344_4969996974801759323_n.jpg" alt="Image 18"></div>
+    <div class="grid-item"><img src="images/catalog/347413643_111331072019746_5651957498333508188_n.jpg" alt="Image 19"></div>
+    <div class="grid-item"><img src="images/catalog/347429067_114331505053036_8818952088874239841_n.jpg" alt="Image 20"></div>
+    <div class="grid-item"><img src="images/catalog/347549803_114331698386350_1518518356110273174_n.jpg" alt="Image 21"></div>
+    <div class="grid-item"><img src="images/catalog/347561410_114335555052631_1577111820295190592_n.jpg" alt="Image 22"></div>
+    <div class="grid-item"><img src="images/catalog/347585589_114335865052600_4707578071089515484_n.jpg" alt="Image 23"></div>
+    <div class="grid-item"><img src="images/catalog/348645903_114334485052738_9080311224209673325_n.jpg" alt="Image 24"></div>
+  </div>
+
+<!-- Footer -->
+<div class="footer">
+  <p id="copyright"> Copyright 2024 From Robyn's Nest  </p>
+</div>
+  <div class="modal" id="image-modal">
+    <span class="modal-close" id="close-modal">&times;</span>
+    <img id="modal-image" src="" alt="Expanded View">
+  </div>
+
+  <script>
+    const gridItems = document.querySelectorAll('.grid-item img');
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeModal = document.getElementById('close-modal');
+
+    gridItems.forEach(item => {
+      item.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImage.src = item.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
