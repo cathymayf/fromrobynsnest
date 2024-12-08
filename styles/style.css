@@ -81,14 +81,59 @@ html {
 .image {
    max-width: 100%;
     height: auto;
-     padding-right: 20px;
+     padding-right: 5px;
 }
+
 
 #slideshow {
         max-width: 100%;
-        position: relative;
-        margin: auto;
+        position: relative; 
+        margin: auto; 
+        
     }
+
+/* Styles for the image container */
+.image-container {
+  position: relative; 
+  display: inline-block; 
+  overflow: hidden;
+}
+
+/* Default styling for the image */
+.image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enlarge on hover */
+.image.hover-enlarge {
+  transform: scale(1.5); /* Enlarges the image */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Adds a shadow for effect */
+}
+
+/* Enlarge on click */
+.image.click-enlarge {
+  transform: scale(2); /* Further enlarges the image */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Content container styles */
+.content-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Add space between image and text */
+}
+
+/* Image container styles */
+.image-container img {
+  width: 450px; /* Image width */
+  height: auto; /* Maintain aspect ratio */
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Text container styles */
+.text-container {
+  max-width: 600px; /* Optional: Limit the width of the text */
+}
 
 
 /*copyright ID */
